@@ -5,18 +5,18 @@
     box-sizing: border-box;
     font-family: Inter;
 }
-body, html{
+
+main{
     height: 100vh;
     width: 100%;
-    overflow-x:hidden;
+    overflow-y: hidden;
 }
 .top{
     background-color: #FFCD9E;
-    height: 630px;
+    height: 70%;
     width: 100%;
     display: flex;
     justify-content: center;
-    /* justify-content: space-around; */
     align-items: center;
     list-style: none;
 }
@@ -42,21 +42,20 @@ body, html{
     line-height: 32px;
 }
 
-#userinfo,input{
+#userinfo input{
    width: 344px;
-   height: 54px;
+   height: 60px;
    font-size: 20px;
    font-weight: 600;
+   border: 3px solid black;
    line-height: 32px;
-   border: 3px solid #000;
    border-radius: 10px;
    outline: none;
    padding-left: 20px;
 }
-
-#userinfo,button{
+#userinfo button{
     width: 216px;
-    height: 54px;
+    height: 60px;
     border: none;
     background-color: #000;
     color: #FFFFFF;
@@ -66,23 +65,28 @@ body, html{
     margin-left: 10px;
     cursor: pointer;
 }
-#userinfo,button:hover{
+
+#userinfo button:hover{
     background-color: #222;
-}
+} 
 
 .detail li:nth-child(5){
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 500;
-    line-height: 25.6px;
+    line-height: 10px;
     padding-left: 40px;
 }
 
+.profile img{
+    width: 100%;
+    height: 100%;
+}
 /* footer */
 .footer{
     background-color: #282828;
     color: #FFFFFF;
-    height: 298px;
+    height: 30%;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -100,4 +104,132 @@ body, html{
 
 .contact li:nth-child(4){
     padding-top: 20px;
+}
+
+/* media query */
+@media screen and (min-width: 1072px) and (max-width:1220px) {
+    #title {
+        font-size: 28px;
+        font-weight: 100;
+        line-height: 45px;
+    }
+    #info {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+    #show {
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 32px;
+    }
+    #userinfo input {
+        width: 280px;
+        height: 50px;
+        font-size: 18px;
+    }
+    #userinfo button {
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+    }
+    .footer {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 5px;
+    }
+}
+@media screen and (max-width: 1072px) {
+    #title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    #info {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    #show {
+        font-size: 15px;
+        line-height: 32px;
+    }
+    #userinfo input {
+        width: 200px;
+        height: 35px;
+        font-size: 15px;
+    }
+    #userinfo button {
+        width: 200px;
+        height: 35px;
+        font-size: 15px;
+    }
+    .detail li:nth-child(5){
+        font-size: 15px;
+    }
+    .footer {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1px;
+    }
+}
+
+@media screen and (max-width:969px){
+    #userinfo{
+        width: 60%;
+    }
+    #userinfo input {
+        width: 100%;
+    }
+    #userinfo button{
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    #title {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    #info {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    #show {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    #userinfo input {
+        width: 200px;
+        height: 35px;
+        font-size: 12px;
+    }
+    #userinfo button {
+        width: 200px;
+        height: 35px;
+        font-size: 12px;
+    }
+    .detail li:nth-child(5){
+        font-size: 14px;
+    }
+    .footer {
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .detail, li {
+        margin: 20px 15px;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .detail li:nth-child(5){
+        font-size: 10px;
+        padding-left:10px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .profile img{
+        display: none;
+    }
 }
